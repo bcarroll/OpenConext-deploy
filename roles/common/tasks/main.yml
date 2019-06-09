@@ -18,17 +18,16 @@
 
 - name: Install tools / clients
   yum:
-    name: "{{ item }}"
     state: present
-  with_items:
-    - telnet
-    - sudo
-    - lynx
-    - ntp
-    - unzip
-    - mysql
-    - bzip2
-    - libselinux-python
+    name:
+      - telnet
+      - sudo
+      - lynx
+      - ntp
+      - unzip
+      - mysql
+      - bzip2
+      - libselinux-python
 
 - name: Install git on development vm
   yum:
